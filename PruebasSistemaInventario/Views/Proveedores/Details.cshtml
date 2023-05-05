@@ -1,0 +1,35 @@
+﻿@model PruebasSistemaInventario.Models.Proveedore
+
+@{
+    ViewData["Title"] = "Detalles de proveedor";
+}
+<div class="container">
+<h1>Detalles de proveedor</h1>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pais)
+        </dd>
+    </dl>
+</div>
+<div>
+        <a asp-action="Edit" asp-route-id="@Model?.ProveedorId" class="btn btn-success">Editar</a> |
+        <a asp-action="Index" class="btn btn-warning">Volver</a>
+</div>
+</div>

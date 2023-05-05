@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PruebasSistemaInventario.Models.Proveedore>
+
+@{
+    ViewData["Title"] = "Listado de proveedores";
+}
+<div class="container">
+<h1>Listado de proveedores</h1>
+
+<p>
+        <a asp-action="Create" class="btn btn-success">Crear nuevo</a>
+</p>
+    <table class="table table-striped text-center">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                        <a asp-action="Edit" asp-route-id="@item.ProveedorId" class="btn btn-primary">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.ProveedorId" class="btn btn-warning">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ProveedorId" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
