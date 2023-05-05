@@ -17,12 +17,12 @@
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Contrasenia" class="control-label"></label>
+                <label asp-for="Contrasenia" class="control-label">Contraseña</label>
                     <input asp-for="Contrasenia" class="form-control" required />
                 <span asp-validation-for="Contrasenia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="RolId" class="control-label"></label>
+                <label asp-for="RolId" class="control-label">Rol</label>
                     <select asp-for="RolId" class="form-control" asp-items="ViewBag.RolId" required></select>
                 <span asp-validation-for="RolId" class="text-danger"></span>
             </div>
@@ -33,7 +33,6 @@
         </form>
     </div>
 </div>
-    
 </div>
 
 @section Scripts {

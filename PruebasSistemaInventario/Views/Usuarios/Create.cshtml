@@ -1,36 +1,32 @@
 ﻿@model PruebasSistemaInventario.Models.Usuario
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Insertar usuarios";
 }
 
-<h1>Create</h1>
-
-<h4>Usuario</h4>
-<hr />
+<div class="container">
+    <h1>Insertar usuarios</h1>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
+                    <input asp-for="Nombre" class="form-control" required />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Contrasenia" class="control-label"></label>
-                <input asp-for="Contrasenia" class="form-control" />
+                    <label asp-for="Contrasenia" class="control-label">Contraseña</label>
+                    <input asp-for="Contrasenia" class="form-control" required />
                 <span asp-validation-for="Contrasenia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Insertar" class="btn btn-success" />
+                    <a asp-action="Index" class="btn btn-danger">Volver</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+</div>   
 </div>
 
 @section Scripts {

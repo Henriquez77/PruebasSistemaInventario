@@ -31,8 +31,11 @@ namespace PruebasSistemaInventario.Controllers
 
         //Metodo asincrono Index, peticion POST
         //Este se ejecuta cuando se envia el formulario login para validar el usuario ingresado
+        //[ValidateAntiForgeryToken] se utiliza para proteger las solicitudes de formulario legítimas en una aplicación web y prevenir ataques CSRF
+        //[HttpPost] se utiliza para marcar una acción del controlador como una acción que debe ser ejecutada solo cuando se recibe una solicitud HTTP POST
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //Los parametros que espera esta accion ([Bind("Nombre,Contrasenia")] Usuario user) se utiliza para controlar qué propiedades del modelo pueden ser vinculadas en la solicitud HTTP
         public async Task<IActionResult> Index([Bind("Nombre,Contrasenia")] Usuario user)
         {
             //Listando todos los registros de la tabla Usuarios de la base de datos
@@ -69,16 +72,23 @@ namespace PruebasSistemaInventario.Controllers
 
         //Metodo asincrono Registrar, peticion POST
         //Este se ejecuta cuando se envia el formulario de registro de usuario para guardar un usuario nuevo
+        //[ValidateAntiForgeryToken] se utiliza para proteger las solicitudes de formulario legítimas en una aplicación web y prevenir ataques CSRF
+        //[HttpPost] se utiliza para marcar una acción del controlador como una acción que debe ser ejecutada solo cuando se recibe una solicitud HTTP POST
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //Los parametros que espera esta accion ([Bind("Nombre","Contrasenia")] Usuario user) se utiliza para controlar qué propiedades del modelo pueden ser vinculadas en la solicitud HTTP
         public async  Task<IActionResult> Registrar([Bind("Nombre","Contrasenia")] Usuario user)
         {
+            // ModelState.IsValid se utiliza para determinar si los datos enviados en una solicitud HTTP son válidos según las reglas de validación definidas en el modelo
             if (ModelState.IsValid)
             {
+                //Si el modelo es valido, se realiza la insercion de un nuevo usuario
                 _context.Add(user);
                 await _context.SaveChangesAsync();
+                //Por ultimo se redirige hacia el login para iniciar sesion
                 return RedirectToAction(nameof(Index),"Login");
             }
+            //Si el modelo no es valido, se recarga la misma pagina para registrarse
             return View("Registrar");
         }
     }
