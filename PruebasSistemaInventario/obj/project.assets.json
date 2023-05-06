@@ -10688,19 +10688,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MINEDUCYT\\.nuget\\packages\\": {}
+    "C:\\Users\\JHONATAN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MINEDUCYT\\Desktop\\PruebasSistemaInventario\\PruebasSistemaInventario\\PruebasSistemaInventario.csproj",
+      "projectUniqueName": "C:\\Users\\JHONATAN\\Desktop\\Programacion I\\PruebasSistemaInventario\\PruebasSistemaInventario\\PruebasSistemaInventario.csproj",
       "projectName": "PruebasSistemaInventario",
-      "projectPath": "C:\\Users\\MINEDUCYT\\Desktop\\PruebasSistemaInventario\\PruebasSistemaInventario\\PruebasSistemaInventario.csproj",
-      "packagesPath": "C:\\Users\\MINEDUCYT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MINEDUCYT\\Desktop\\PruebasSistemaInventario\\PruebasSistemaInventario\\obj\\",
+      "projectPath": "C:\\Users\\JHONATAN\\Desktop\\Programacion I\\PruebasSistemaInventario\\PruebasSistemaInventario\\PruebasSistemaInventario.csproj",
+      "packagesPath": "C:\\Users\\JHONATAN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JHONATAN\\Desktop\\Programacion I\\PruebasSistemaInventario\\PruebasSistemaInventario\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MINEDUCYT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JHONATAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10764,7 +10764,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

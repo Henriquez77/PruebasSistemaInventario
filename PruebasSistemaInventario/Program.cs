@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<InventarioContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("PCLaptop")));
+builder.Services.AddDbContext<InventarioContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("PCMaster")));
 
 var app = builder.Build();
 
